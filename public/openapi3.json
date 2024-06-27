@@ -7140,6 +7140,18 @@
         },
         "type": "object"
       },
+      "NavbarPreference": {
+        "properties": {
+          "savedItems": {
+            "items": {
+              "$ref": "#/components/schemas/PreferenceNavLink"
+            },
+            "type": "array"
+          }
+        },
+        "title": "NavbarPreference defines model for NavbarPreference.",
+        "type": "object"
+      },
       "NewApiKeyResult": {
         "properties": {
           "id": {
@@ -7701,6 +7713,9 @@
           },
           "language": {
             "type": "string"
+          },
+          "navbar": {
+            "$ref": "#/components/schemas/NavbarPreference"
           },
           "queryHistory": {
             "$ref": "#/components/schemas/QueryHistoryPreference"
@@ -8279,6 +8294,24 @@
         },
         "type": "object"
       },
+      "PreferenceNavLink": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "title": "PreferenceNavLink defines model for PreferenceNavLink.",
+        "type": "object"
+      },
       "Preferences": {
         "description": "Spec defines user, team or org Grafana preferences",
         "properties": {
@@ -8292,6 +8325,9 @@
           "language": {
             "description": "Selected language (beta)",
             "type": "string"
+          },
+          "navbar": {
+            "$ref": "#/components/schemas/NavbarPreference"
           },
           "queryHistory": {
             "$ref": "#/components/schemas/QueryHistoryPreference"
@@ -11542,6 +11578,9 @@
           },
           "language": {
             "type": "string"
+          },
+          "navbar": {
+            "$ref": "#/components/schemas/NavbarPreference"
           },
           "queryHistory": {
             "$ref": "#/components/schemas/QueryHistoryPreference"
