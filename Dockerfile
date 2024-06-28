@@ -12,7 +12,7 @@ FROM --platform=${JS_PLATFORM} ${JS_IMAGE} as js-builder
 
 ENV NODE_OPTIONS=--max_old_space_size=8000
 
-WORKDIR /tmp/grafana
+WORKDIR /tmp/grafana @ McEnergy
 
 COPY package.json project.json nx.json yarn.lock .yarnrc.yml ./
 COPY .yarn .yarn
